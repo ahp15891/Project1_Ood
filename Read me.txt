@@ -1,0 +1,2 @@
+The only public declaration after running the Analyzer were found in DataStore.h
+I have created DataStore the same way Dr. Fawcett provided.

@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="Project1_Ood/Project1_Ood.vcxproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|Win32" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Project1_Ood/FileSystem.cpp">
+    <Files>
+      <File FileName="Project1_Ood/FileSystem.h" Line="25" Column="43" />
+      <File FileName="Project1_Ood/FileSystem.cpp" Line="20" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
