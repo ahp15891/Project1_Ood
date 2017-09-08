@@ -4,7 +4,7 @@
 // FileSystem.h - Support file and directory operations                    //
 // ver 2.2                                                                 //
 // ----------------------------------------------------------------------- //
-// copyright © Jim Fawcett, 2012                                           //
+// copyright ï¿½ Jim Fawcett, 2012                                           //
 // All rights granted provided that this notice is retained                //
 // ----------------------------------------------------------------------- //
 // Language:    Visual C++, Visual Studio 2010                             //
@@ -17,10 +17,10 @@
 /*
  * Module Operations:
  * ==================
- * This module provides classes, File, FileInfo, Path, Directory, and 
+ * This module provides classes, File, FileInfo, Path, Directory, and
  * FileSystemSearch.
  *
- * The File class supports opening text and binary files for either input 
+ * The File class supports opening text and binary files for either input
  * or output.  File objects have names, get and put lines of text, get and
  * put blocks of bytes if binary, can be tested for operational state,
  * cleared of errors, and output File objects can be flushed to their streams.
@@ -34,7 +34,7 @@
  * and build filespecs from path and name.  Path also provides methods to
  * convert filespecs to uppercase and to lowercase.
  *
- * The Directory class supports getting filenames or directories from a 
+ * The Directory class supports getting filenames or directories from a
  * fully qualified filespec, e.g., path + filename pattern using static
  * methods.  It also provides non-static methods to get and set the current
  * directory.
@@ -61,7 +61,7 @@
  * d.setCurrentDirectory(dir);
  * std::vector<std::string> files = Directory::getFiles(path, pattern);
  * std::vector<std::string> dirs = Directory::getDirectories(path);
- * 
+ *
  * Required Files:
  * ===============
  * FileSystem.h, FileSystem.cpp
@@ -80,7 +80,7 @@
  * - made Directory's getCurrentDirectory and setCurrentDirectory static
  * - added exists, create, and remove to Directory class
  * ver 2.0 : 04 Jun 12
- * - made a few small changes to provide same interface as 
+ * - made a few small changes to provide same interface as
  *   Linux version.
  * ver 1.0 : 31 Jan 09
  * - first release
@@ -94,7 +94,7 @@ namespace FileSystem
 {
   /////////////////////////////////////////////////////////
   // Block
-  
+
   typedef char Byte;
 
   class Block
@@ -114,10 +114,11 @@ namespace FileSystem
 
   /////////////////////////////////////////////////////////
   // File
-  
+
   class File
   {
   public:
+    enum Test {in, out};
     enum direction { in, out };
     enum type { text, binary };
     File(const std::string& filespec);
@@ -158,7 +159,7 @@ namespace FileSystem
     std::string name() const;
     std::string date(dateFormat df=fullformat) const;
     size_t size() const;
-    
+
     bool isArchive() const;
     bool isCompressed() const;
     bool isDirectory() const;
@@ -197,7 +198,7 @@ namespace FileSystem
     static std::string toLower(const std::string& src);
     static std::string toUpper(const std::string& src);
   };
-  
+
   /////////////////////////////////////////////////////////
   // Directory
 
